@@ -10,7 +10,7 @@
 }
 
 .user-container {
-  border-bottom: solid 1px #868686;
+  border-bottom: solid 1px #bfbfbf;
 }
 
 .user {
@@ -21,6 +21,15 @@
 
   .user-details {
     padding: 2rem;
+
+    div {
+      padding: 0.25rem 0;
+    }
+
+    .user-email {
+      color: #474350;
+      // color: #868686;
+    }
   }
 }
 
@@ -41,6 +50,6 @@
 
 @media (min-width: 840px) and (max-width: 1300px) {
   .user {
-    width: 60%;
+    width: 100%;
   }
 }
