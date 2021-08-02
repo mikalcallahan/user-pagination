@@ -13,7 +13,7 @@ export const staggerAnimation = trigger('staggerAnimation', [
       ':enter',
       [
         style({ opacity: 0 }),
-        stagger('450ms', animate('600ms ease-out', style({ opacity: 1 }))),
+        stagger('500ms', animate('700ms ease-out', style({ opacity: 1 }))),
       ],
       { optional: true }
     ),
