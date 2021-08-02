@@ -1,5 +1,6 @@
 <div class="page-content">
   <div *ngIf="!(loading$ | async); else loadingTemplate">
+    <h1>User List</h1>
     <user-list [users]="users$ | async"></user-list>
     <paging
       [paging]="paging$ | async"
