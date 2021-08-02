@@ -1,6 +1,6 @@
 <div class="user-list">
   <div *ngIf="users">
-    <div [@listAnimation]="users.length">
+    <div [@staggerAnimation]="users.length">
       <div *ngFor="let user of users" class="user-container">
         <div class="user">
           <div class="img-container"><img src="{{ user.avatar }}" /></div>
