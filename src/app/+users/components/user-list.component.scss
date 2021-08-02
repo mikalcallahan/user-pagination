@@ -20,7 +20,8 @@
   width: 100%;
 
   .user-details {
-    padding: 2rem;
+    padding: 1rem;
+    // padding: 2rem;
 
     div {
       padding: 0.25rem 0;
@@ -43,13 +44,39 @@
 }
 
 @media (max-width: 600px) {
+  .user-list div {
+    flex: auto;
+  }
+  .user-details {
+    padding: 0;
+  }
+  img {
+    width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .user-container {
+    padding: 2rem 0;
+  }
   .user {
+    flex-wrap: wrap;
     padding: 0.25rem;
+  }
+
+  .img-container {
+    flex: auto;
   }
 }
 
 @media (min-width: 840px) and (max-width: 1300px) {
   .user {
     width: 100%;
+  }
+}
+
+@media (min-width: 840px) {
+  .user-details {
+    padding: 2rem;
   }
 }
