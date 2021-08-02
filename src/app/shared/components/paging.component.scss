@@ -1,0 +1,16 @@
+.page-list {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+.active {
+  opacity: 0.4;
+}
+
+@media (max-width: 800px) {
+  .page-list {
+    justify-content: center;
+    padding: 0;
+  }
+}

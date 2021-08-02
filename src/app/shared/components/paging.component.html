@@ -1,0 +1,14 @@
+<div *ngIf="shouldRender" class="page-navigation-container">
+  <ul class="page-list">
+    <li *ngFor="let page of pages" [ngClass]="{ active: page.isActive }">
+      <button
+        mat-button
+        (click)="selectPage(page.value)"
+        class="button outline page {{ page.class }}"
+        [disabled]="isButtonDisabled(page)"
+      >
+        <span>{{ page.label }}</span>
+      </button>
+    </li>
+  </ul>
+</div>

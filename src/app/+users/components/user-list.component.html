@@ -1,1 +1,92 @@
-<div>User List</div>
+<div>
+  <h1>User List</h1>
+  <div class="user-list">
+    <div *ngIf="users">
+      <div [@listAnimation]="users.length">
+        <div *ngFor="let user of users" class="user-container">
+          <div class="user">
+            <div class="img-container"><img src="{{ user.avatar }}" /></div>
+            <div class="user-details">
+              <div>
+                {{ user.id }}
+              </div>
+              <div>{{ user.first_name }} {{ user.last_name }}</div>
+              <div>{{ user.email }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+  <div *ngIf="users">
+    <div>#</div>
+    <div [@listAnimation]="users.length">
+      <div *ngFor="let user of users">
+        <div>
+          <div class="img-container"><img src="{{ user.avatar }}" /></div>
+          <div>
+            {{ user.id }}
+          </div>
+          <div>{{ user.first_name }} {{ user.last_name }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="users">
+    <div>Name</div>
+    <div [@listAnimation]="users.length">
+      <div *ngFor="let user of users">
+        {{ user.first_name }} {{ user.last_name }}
+      </div>
+    </div>
+  </div>
+  <div *ngIf="users">
+    <div>Email</div>
+    <div [@listanimation]="users.length">
+      <div *ngFor="let user of users">
+        {{ user.email }}
+      </div>
+    </div>
+  </div>
+  -->
+    <!--
+  <table mat-table [dataSource]="users">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>No.</th>
+      <td mat-cell *matCellDef="let user">{{ user.id }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let user"><img src="{{ user.avatar }}" /></td>
+      <td mat-cell *matCellDef="let user">
+        {{ user.first_name }} {{ user.last_name }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let user">{{ user.email }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr [@listAnimation] mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+  -->
+    <!--
+    <tr>
+      <th [@listAnimation]="1">Name</th>
+      <th></th>
+      <th>Email</th>
+      <th>Id</th>
+    </tr>
+    <tr [@listAnimation]="users.length" *ngFor="let user of users">
+      <td><img src="{{ user.avatar }}" /></td>
+      <td [@listAnimation]="users.length">{{ user.first_name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.id }}</td>
+    </tr>
+  </table>
+    -->
+  </div>
+</div>

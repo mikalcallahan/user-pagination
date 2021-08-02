@@ -1,0 +1,46 @@
+.user-list {
+  display: flex;
+  just-content: center;
+  font-size: 1.15rem;
+  width: 100%;
+  overflow: auto;
+  div {
+    flex: 1;
+  }
+}
+
+.user-container {
+  border-bottom: solid 1px #868686;
+}
+
+.user {
+  align-items: center;
+  display: flex;
+  padding: 2rem;
+  width: 100%;
+
+  .user-details {
+    padding: 2rem;
+  }
+}
+
+.img-container {
+  display: flex;
+  width: 25%;
+
+  img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .user {
+    padding: 0.25rem;
+  }
+}
+
+@media (min-width: 840px) and (max-width: 1300px) {
+  .user {
+    width: 60%;
+  }
+}
